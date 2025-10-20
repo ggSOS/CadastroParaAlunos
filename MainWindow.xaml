@@ -1,0 +1,32 @@
+﻿<Window x:Class="CadastroParaAlunos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CadastroParaAlunos"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#1c2022">
+        <Border BorderBrush="#616d72" BorderThickness="1" Margin="50,100,400,100">
+
+        <Button Content="Alunos Cadastrados" HorizontalAlignment="Right" Margin="0,0,19,28" VerticalAlignment="Bottom" Height="30" Width="140" Click="Button_Click" FontFamily="Century Gothic"/>
+        <Button Content="Cadastrar" HorizontalAlignment="Left" Margin="70,270,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" Foreground="#ed145b"  FontSize="13" Background="#1c2022" BorderBrush="#ed145b" FontWeight="Bold" Height="40" Width="100"/>
+
+
+        <TextBlock HorizontalAlignment="Left" Margin="50,50,0,0" TextWrapping="Wrap" Text="Cadastro de Aluno" FontSize="20" FontFamily="Century Gothic" FontWeight="Bold" Foreground="#91a3ad" VerticalAlignment="Top"/>
+
+
+        <TextBox HorizontalAlignment="Left" Margin="70,150,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic" Background="#1c2022" Height="30" VerticalContentAlignment="Center" Padding="10,0,10,0" FontSize="13" BorderBrush="#616d72" Foreground="#91a3ad" FontWeight="Bold"/>
+        <Label Content="Nome" Foreground="#616d72" HorizontalAlignment="Left" Margin="75,125,0,0" VerticalAlignment="Top" Height="55" Width="115" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13"/>
+
+        <TextBox HorizontalAlignment="Left" Margin="250,150,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic" Background="#1c2022" Height="30" VerticalContentAlignment="Center" Padding="10,0,10,0" FontSize="13" BorderBrush="#616d72" Foreground="#91a3ad" FontWeight="Bold"/>
+        <Label Content="Matrícula" Foreground="#616d72" HorizontalAlignment="Left" Margin="255,125,0,0" VerticalAlignment="Top" Height="55" Width="115" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13"/>
+
+        <TextBox HorizontalAlignment="Left" Margin="70,220,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic" Background="#1c2022" Height="30" VerticalContentAlignment="Center" Padding="10,0,10,0" FontSize="13" BorderBrush="#616d72" Foreground="#91a3ad" FontWeight="Bold"/>
+        <Label Content="Primeira Média" Foreground="#616d72" HorizontalAlignment="Left" Margin="75,195,0,0" VerticalAlignment="Top" Height="55" Width="115" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13"/>
+
+        <TextBox HorizontalAlignment="Left" Margin="250,220,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic" Background="#1c2022" Height="30" VerticalContentAlignment="Center" Padding="10,0,10,0" FontSize="13" BorderBrush="#616d72" Foreground="#91a3ad" FontWeight="Bold"/>
+        <Label Content="Segunda Média" Foreground="#616d72" HorizontalAlignment="Left" Margin="255,195,0,0" VerticalAlignment="Top" Height="55" Width="115" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13"/>
+        </Border>
+    </Grid>
+</Window>
