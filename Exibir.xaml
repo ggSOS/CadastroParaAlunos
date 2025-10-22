@@ -5,9 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CadastroParaAlunos"
         mc:Ignorable="d"
-        Title="Exibir" Height="450" Width="800">
-    <Grid>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        Title="Exibir" Height="450" Width="900">
+    <Grid Background="#1c2022">
+        <Border Width="520" Margin="0,50,50,0">
+            <DataGrid x:Name="myGrid" Background="#1c2022"  BorderBrush="#616d72" BorderThickness="1" Foreground="#91a3ad" RowBackground="#1c2022" HorizontalGridLinesBrush="#616d72" VerticalGridLinesBrush="#616d72" AutoGenerateColumns="False">
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="MinWidth" Value="100"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                        <Setter Property="Background" Value="#1c2022"/>
+                        <Setter Property="Foreground" Value="#91a3ad"/>
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
+                    <DataGridTextColumn Header="Matricula" Binding="{Binding Matricula}"/>
+                    <DataGridTextColumn Header="Primeira Nota" Binding="{Binding Nota1}"/>
+                    <DataGridTextColumn Header="Segunda Nota" Binding="{Binding Nota2}"/>
+                    <DataGridTextColumn Header="Media" Binding="{Binding Media}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
 
     </Grid>
 </Window>

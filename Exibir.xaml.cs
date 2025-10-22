@@ -22,6 +22,7 @@ namespace CadastroParaAlunos
         public Exibir()
         {
             InitializeComponent();
+            myGrid.ItemsSource = Cadastro.Alunos;
         }
     }
 }

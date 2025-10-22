@@ -7,26 +7,39 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#1c2022">
-        <Border BorderBrush="#616d72" BorderThickness="1" Margin="50,100,400,100">
-
-        <Button Content="Alunos Cadastrados" HorizontalAlignment="Right" Margin="0,0,19,28" VerticalAlignment="Bottom" Height="30" Width="140" Click="Button_Click" FontFamily="Century Gothic"/>
-        <Button Content="Cadastrar" HorizontalAlignment="Left" Margin="70,270,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" Foreground="#ed145b"  FontSize="13" Background="#1c2022" BorderBrush="#ed145b" FontWeight="Bold" Height="40" Width="100"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,50,0,0" TextWrapping="Wrap" Text="Cadastro de Aluno" FontSize="35" FontFamily="Century Gothic" FontWeight="Bold" Foreground="#91a3ad" VerticalAlignment="Top"/>
 
 
-        <TextBlock HorizontalAlignment="Left" Margin="50,50,0,0" TextWrapping="Wrap" Text="Cadastro de Aluno" FontSize="20" FontFamily="Century Gothic" FontWeight="Bold" Foreground="#91a3ad" VerticalAlignment="Top"/>
+        <Border BorderBrush="#2a3032" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,100,0,0" Height="300" Width="400">
+            <Grid>
+                <Button x:Name="cadastrarButton" Click="cadastrarButton_Click" Cursor="Hand" Content="Cadastrar" HorizontalAlignment="Left" Margin="30,0,0,30" VerticalAlignment="Bottom" FontFamily="Century Gothic" Foreground="#ed145b"  FontSize="13" Background="#1c2022" BorderBrush="#ed145b" FontWeight="Bold" Height="40" Width="100"/>
 
 
-        <TextBox HorizontalAlignment="Left" Margin="70,150,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic" Background="#1c2022" Height="30" VerticalContentAlignment="Center" Padding="10,0,10,0" FontSize="13" BorderBrush="#616d72" Foreground="#91a3ad" FontWeight="Bold"/>
-        <Label Content="Nome" Foreground="#616d72" HorizontalAlignment="Left" Margin="75,125,0,0" VerticalAlignment="Top" Height="55" Width="115" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13"/>
+                <TextBlock x:Name="cadastroConfirmado" HorizontalAlignment="Left" Margin="135,240,0,0" TextWrapping="Wrap" Text="" Foreground="#fff" VerticalAlignment="Top"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="250,150,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic" Background="#1c2022" Height="30" VerticalContentAlignment="Center" Padding="10,0,10,0" FontSize="13" BorderBrush="#616d72" Foreground="#91a3ad" FontWeight="Bold"/>
-        <Label Content="Matrícula" Foreground="#616d72" HorizontalAlignment="Left" Margin="255,125,0,0" VerticalAlignment="Top" Height="55" Width="115" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="70,220,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic" Background="#1c2022" Height="30" VerticalContentAlignment="Center" Padding="10,0,10,0" FontSize="13" BorderBrush="#616d72" Foreground="#91a3ad" FontWeight="Bold"/>
-        <Label Content="Primeira Média" Foreground="#616d72" HorizontalAlignment="Left" Margin="75,195,0,0" VerticalAlignment="Top" Height="55" Width="115" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13"/>
+                <TextBox x:Name="nomeInput" HorizontalAlignment="Left" Margin="30,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontFamily="Century Gothic" Background="#1c2022" Height="30" VerticalContentAlignment="Center" Padding="10,0,10,0" FontSize="13" BorderBrush="#616d72" Foreground="#91a3ad" FontWeight="Bold"/>
+                <Label x:Name="nomeLabel" MouseDown="nomeLabel_MouseDown" Cursor="Hand" Content="Nome" Foreground="#616d72" HorizontalAlignment="Left" Margin="35,25,0,0" VerticalAlignment="Top" Height="55" Width="145" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13"/>
+                <TextBlock x:Name="nomeErro" HorizontalAlignment="Left" Margin="35,80,0,0" TextWrapping="Wrap" Text="" Foreground="#ed145b" VerticalAlignment="Top" Width="145"/>
 
-        <TextBox HorizontalAlignment="Left" Margin="250,220,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic" Background="#1c2022" Height="30" VerticalContentAlignment="Center" Padding="10,0,10,0" FontSize="13" BorderBrush="#616d72" Foreground="#91a3ad" FontWeight="Bold"/>
-        <Label Content="Segunda Média" Foreground="#616d72" HorizontalAlignment="Left" Margin="255,195,0,0" VerticalAlignment="Top" Height="55" Width="115" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13"/>
+
+                <TextBox x:Name="matriculaInput" HorizontalAlignment="Right" Margin="0,50,30,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontFamily="Century Gothic" Background="#1c2022" Height="30" VerticalContentAlignment="Center" Padding="10,0,10,0" FontSize="13" BorderBrush="#616d72" Foreground="#91a3ad" FontWeight="Bold"/>
+                <Label x:Name="matriculaLabel" MouseDown="matriculaLabel_MouseDown" Cursor="Hand" Content="Matrícula" Foreground="#616d72" HorizontalAlignment="Left" Margin="223,25,0,0" VerticalAlignment="Top" Height="55" Width="145" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13"/>
+                <TextBlock x:Name="matriculaErro" HorizontalAlignment="Left" Margin="223,80,0,0" TextWrapping="Wrap" Text="" Foreground="#ed145b" VerticalAlignment="Top" Width="145"/>
+
+
+                <TextBox x:Name="nota1Input" HorizontalAlignment="Left" Margin="30,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontFamily="Century Gothic" Background="#1c2022" Height="30" VerticalContentAlignment="Center" Padding="10,0,10,0" FontSize="13" BorderBrush="#616d72" Foreground="#91a3ad" FontWeight="Bold"/>
+                <Label x:Name="nota1Label" MouseDown="nota1Label_MouseDown" Cursor="Hand" Content="Primeira Nota" Foreground="#616d72" HorizontalAlignment="Left" Margin="35,125,0,0" VerticalAlignment="Top" Height="55" Width="145" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13"/>
+                <TextBlock x:Name="nota1Erro" HorizontalAlignment="Left" Margin="35,180,0,0" TextWrapping="Wrap" Text="" Foreground="#ed145b" VerticalAlignment="Top" Width="145"/>
+
+
+                <TextBox x:Name="nota2Input" HorizontalAlignment="Right" Margin="0,150,30,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontFamily="Century Gothic" Background="#1c2022" Height="30" VerticalContentAlignment="Center" Padding="10,0,10,0" FontSize="13" BorderBrush="#616d72" Foreground="#91a3ad" FontWeight="Bold"/>
+                <Label x:Name="nota2Label" MouseDown="nota2Label_MouseDown" Cursor="Hand" Content="Segunda Nota" Foreground="#616d72" HorizontalAlignment="Left" Margin="223,125,0,0" VerticalAlignment="Top" Height="55" Width="145" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13"/>
+                <TextBlock x:Name="nota2Erro" HorizontalAlignment="Left" Margin="223,180,0,0" TextWrapping="Wrap" Text="" Foreground="#ed145b" VerticalAlignment="Top" Width="145"/>
+            </Grid>
         </Border>
+
+
+        <Button x:Name="paginaAlunosButton" Click="paginaAlunosButton_Click" Cursor="Hand" Content="Ver Alunos Cadastrados" HorizontalAlignment="Left" Margin="580,360,0,0" VerticalAlignment="Top" Height="40" Width="180" FontFamily="Century Gothic" Foreground="#ed145b"  FontSize="13" Background="#1c2022" BorderBrush="#ed145b" FontWeight="Bold"/>
     </Grid>
 </Window>

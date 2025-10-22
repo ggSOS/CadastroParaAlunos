@@ -8,12 +8,19 @@ namespace CadastroParaAlunos
 {
     internal abstract class Cadastro
     {
-        public static List<Aluno> alunos;
+        
+        private static List<Aluno> alunos = new List<Aluno>();
+        public static List<Aluno> Alunos
+        {
+            get{ return alunos; }
+        }
+
 
         //public Cadastro(List<Aluno> alunos)
         //{
         //    alunos = new List<Aluno> ();
         //}
+
 
         public static void Cadastrar(Aluno aluno)
         {
